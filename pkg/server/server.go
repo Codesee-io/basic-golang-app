@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	apn "github.com/codesee/basic-golang-app/pkg/aliaspackagename"
+	"github.com/codesee/basic-golang-app/pkg/hello"
 	"github.com/codesee/basic-golang-app/pkg/logger"
 	"github.com/codesee/basic-golang-app/pkg/regularpackagename"
 	"github.com/codesee/basic-golang-app/pkg/wrongpackagename"
@@ -14,9 +15,9 @@ import (
 
 type SomeType string
 
-type SomeStruct struct {}
+type SomeStruct struct{}
 
-type SomeInterface interface {}
+type SomeInterface interface{}
 
 const SomeConst = "ConstValue"
 
@@ -38,6 +39,7 @@ func New(port int) (*http.Server, error) {
 
 	regularpackagename.RegisterRoutes(e)
 	otherpackagename.RegisterRoutes(e)
+	hello.RegisterRoutes(e)
 	apn.RegisterRoutes(e)
 
 	srv := &http.Server{
