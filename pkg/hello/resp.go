@@ -1,3 +1,3 @@
 package hello
 
-var resp = []byte(`{"hello":"world"}`)
+var resp = []byte(`{"hello":"world2"}`)
